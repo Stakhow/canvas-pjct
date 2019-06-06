@@ -1,0 +1,91 @@
+
+// ************************************ 
+//          Responsive
+// *************************************
+
+$xl: 1200px;
+$lg: 991px;
+$md: 768px;
+$sm: 576px;
+$xs: 480px;
+
+
+// ************************************ 
+//          Colors
+// ************************************
+
+
+$red: #fe3938;
+$black: #292e34;
+$dark-blue: #2d5a64;
+
+
+
+// ************************************ 
+//          Font-family
+// ************************************
+
+$font-stack: -apple-system, BlinkMacSystemFont,'Open Sans','Rubik',sans-serif;
+
+
+// ************************************ 
+//          Animation
+// ************************************
+
+$transition: 0.3s all ease-in-out;
+$transition-svg: 0.5s all ease-in-out;
+
+
+%bg-cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+%bg-auto {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+%bg-contain {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+
+@function get-vw($target){
+  $vw-context: (1920 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function get-vw-1170($target){
+  $vw-context: (1170 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+@function get-vw-x($target, $mediaQuery){
+  $vw-context: ($mediaQuery * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@function txt-vw($target){
+  $vw-context: (1366 * 0.007) * 1px;
+  // @return ($target / $vw-context) * 1vw;
+}
+
+@function font-min($target){
+  @return ($target * 0.8 );
+}
+
+@function toRem($font-size){
+  @return ($font-size / 16px) * 1rem
+}
+
+@function toEm($font-size1, $font-size2){
+  @return ($font-size2 / $font-size1) * 1em
+}
+
+
+
+

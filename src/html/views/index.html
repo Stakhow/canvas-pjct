@@ -1,0 +1,27 @@
+<% var data = {
+title: "",
+classMy: "",
+metaDescription: "<meta name='description' content=''>",
+}; %>
+
+<%= _.template(require('./../includes/header/header.html'))(data) %>
+
+<!--************************************
+        Main  start
+*************************************-->
+
+<main>
+
+	<div class="container">
+		<canvas id="canvas" width="150" height="150"></canvas>
+	</div>
+
+</main>
+
+<!--************************************
+        Main end
+*************************************-->
+
+<%= _.template(require('./../includes/footer/footer.html'))() %>
+
+
